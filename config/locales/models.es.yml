@@ -23,7 +23,7 @@ es:
         description: 'Descripción'
         price: 'Precio'
         stock: 'Cantidad disponible'
-        category_id: 'Categoría'
+        category: 'Categoría'
       user:
         name: 'Nombre'
         lastname: 'Apellido'

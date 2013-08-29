@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20130829225354) do
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
-    t.string   "name",       null: false
+    t.string   "name",                     null: false
+    t.integer  "lock_version", default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,11 +26,12 @@ ActiveRecord::Schema.define(version: 20130829225354) do
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true, using: :btree
 
   create_table "products", force: true do |t|
-    t.string   "name",                                             null: false
+    t.string   "name",                                              null: false
     t.text     "description"
-    t.decimal  "price",       precision: 15, scale: 2,             null: false
-    t.integer  "stock",                                default: 0, null: false
-    t.integer  "category_id",                                      null: false
+    t.decimal  "price",        precision: 15, scale: 2,             null: false
+    t.integer  "stock",                                 default: 0, null: false
+    t.integer  "lock_version",                          default: 0, null: false
+    t.integer  "category_id",                                       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

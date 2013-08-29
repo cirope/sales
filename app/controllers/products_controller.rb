@@ -54,7 +54,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :stock, :category_id)
+    params.require(:product).permit(:name, :description, :price, :stock, :category_id, :lock_version)
   end
   alias_method :resource_params, :product_params
 

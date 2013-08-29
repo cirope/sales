@@ -54,7 +54,7 @@ class CategoriesController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :lock_version)
   end
   alias_method :resource_params, :category_params
 

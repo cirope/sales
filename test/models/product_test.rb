@@ -9,11 +9,13 @@ class ProductTest < ActiveSupport::TestCase
     @product.name = ''
     @product.price = nil
     @product.stock = nil
+    @product.category = nil
     
     assert @product.invalid?
     assert_error @product, :name, :blank
     assert_error @product, :price, :blank
     assert_error @product, :stock, :blank
+    assert_error @product, :category, :blank
   end
 
   test 'validates unique attributes' do
