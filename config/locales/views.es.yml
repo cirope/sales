@@ -62,6 +62,25 @@ es:
       success: 'Se enviaron instrucciones a tu correo para restablecer la contraseña'
       not_found: 'El correo que ingresaste no está registrado, verifica que no esté mal escrito'
 
+  products:
+    create:
+      success: 'Producto creado correctamente'
+    destroy:
+      success: 'Producto eliminado'
+    edit:
+      title: 'Editar producto'
+    index:
+      new: 'Nuevo producto'
+      title: 'Listado de productos'
+      empty_html: 'No hay productos, puede crear uno con el botón <span class="label label-info">Nuevo producto</span>'
+    new:
+      title: 'Crear producto'
+    show:
+      title: 'Ver producto'
+    update:
+      success: 'Producto actualizado correctamente'
+      stale_object_error: 'No se pudo actualizar el producto, revise los datos e inténtelo nuevamente'
+
   profiles:
     edit:
       title: 'Mis datos'

@@ -1,0 +1,6 @@
+computer:
+  name: Computer
+  description: Big calculator =)
+  price: 1000.15
+  stock: 10
+  category: electronics

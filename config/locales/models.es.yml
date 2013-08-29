@@ -8,6 +8,9 @@ es:
       category:
         one: 'Categoría'
         other: 'Categorías'
+      product:
+        one: 'Producto'
+        other: 'Productos'
       user:
         one: 'Usuario'
         other: 'Usuarios'
@@ -15,6 +18,12 @@ es:
     attributes:
       category:
         name: 'Nombre'
+      product:
+        name: 'Nombre'
+        description: 'Descripción'
+        price: 'Precio'
+        stock: 'Cantidad disponible'
+        category_id: 'Categoría'
       user:
         name: 'Nombre'
         lastname: 'Apellido'

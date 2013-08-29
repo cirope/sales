@@ -1,6 +1,4 @@
 Sales::Application.routes.draw do
-  resources :categories
-
   # Sessions
   get 'login', to: 'sessions#new', as: 'login'
   post 'sessions', to: 'sessions#create', as: 'sessions'
@@ -11,6 +9,8 @@ Sales::Application.routes.draw do
   patch 'profile', to: 'profiles#update'
 
   # Resources
+  resources :categories
+  resources :products
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
 

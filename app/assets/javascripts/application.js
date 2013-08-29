@@ -17,5 +17,6 @@
 //= require bootstrap
 //= require categories
 //= require password_resets
+//= require products
 //= require profiles
 //= require users
