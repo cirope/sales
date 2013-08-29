@@ -13,6 +13,25 @@ es:
     logout: 'Salir'
     show: 'Ver'
 
+  categories:
+    create:
+      success: 'Categoría creada correctamente'
+    destroy:
+      success: 'Categoría eliminada'
+    edit:
+      title: 'Editar categoría'
+    index:
+      new: 'Nueva categoría'
+      title: 'Listado de categorías'
+      empty_html: 'No hay categorías, puede crear una con el botón <span class="label label-info">Nueva categoría</span>'
+    new:
+      title: 'Crear categoría'
+    show:
+      title: 'Ver categoría'
+    update:
+      success: 'Categoría actualizada correctamente'
+      stale_object_error: 'No se pudo actualizar la categoría, revise los datos e inténtelo nuevamente'
+
   sessions:
     new:
       title: 'Ingreso'

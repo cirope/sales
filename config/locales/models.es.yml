@@ -5,11 +5,16 @@ es:
 
   activerecord:
     models:
+      category:
+        one: 'Categoría'
+        other: 'Categorías'
       user:
         one: 'Usuario'
         other: 'Usuarios'
 
     attributes:
+      category:
+        name: 'Nombre'
       user:
         name: 'Nombre'
         lastname: 'Apellido'
