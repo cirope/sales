@@ -9,5 +9,7 @@ class CreateCommerces < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :commerces, :name, unique: true
   end
 end
