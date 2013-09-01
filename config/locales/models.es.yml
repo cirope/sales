@@ -11,6 +11,9 @@ es:
       commerce:
         one: 'Comercio'
         other: 'Comercios'
+      person:
+        one: 'Persona'
+        other: 'Personas'
       phone:
         one: 'Teléfono'
         other: 'Teléfonos'
@@ -29,6 +32,9 @@ es:
         address: 'Dirección'
         city: 'Localidad'
         state: 'Provincia'
+      person:
+        name: 'Nombre'
+        identification: 'DNI'
       phone:
         description: 'Descripción'
         phone: 'Teléfono'
