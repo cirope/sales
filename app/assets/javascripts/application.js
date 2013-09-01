@@ -16,6 +16,7 @@
 //= require turbolinks_events
 //= require bootstrap
 //= require categories
+//= require commerces
 //= require password_resets
 //= require products
 //= require profiles

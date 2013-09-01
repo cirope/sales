@@ -10,6 +10,7 @@ Sales::Application.routes.draw do
 
   # Resources
   resources :categories
+  resources :commerces
   resources :products
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]

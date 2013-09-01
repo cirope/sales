@@ -32,6 +32,25 @@ es:
       success: 'Categoría actualizada correctamente'
       stale_object_error: 'No se pudo actualizar la categoría, revise los datos e inténtelo nuevamente'
 
+  commerces:
+    create:
+      success: 'Comercio creado correctamente'
+    destroy:
+      success: 'Comercio eliminado'
+    edit:
+      title: 'Editar comercio'
+    index:
+      new: 'Nuevo comercio'
+      title: 'Listado de comercios'
+      empty_html: 'No hay comercios, puede crear uno con el botón <span class="label label-info">Nuevo comercio</span>'
+    new:
+      title: 'Crear comercio'
+    show:
+      title: 'Ver comercio'
+    update:
+      success: 'Comercio actualizado correctamente'
+      stale_object_error: 'No se pudo actualizar el comercio, revise los datos e inténtelo nuevamente'
+
   sessions:
     new:
       title: 'Ingreso'

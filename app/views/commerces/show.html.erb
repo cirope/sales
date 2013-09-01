@@ -1,0 +1,17 @@
+<h2><%= @commerce %></h2>
+
+<p>
+  <strong><%= Commerce.human_attribute_name 'address' %></strong>:
+  <%= @commerce.address %>
+</p>
+<p>
+  <strong><%= Commerce.human_attribute_name 'city' %></strong>:
+  <%= @commerce.city %>
+</p>
+<p>
+  <strong><%= Commerce.human_attribute_name 'state' %></strong>:
+  <%= @commerce.state %>
+</p>
+
+<%= link_to_edit edit_commerce_path(@commerce) %> |
+<%= link_to_index commerces_path %>

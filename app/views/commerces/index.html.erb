@@ -1,0 +1,29 @@
+<% if @commerces.empty? %>
+  <%= render 'shared/empty_index', message: t('.empty_html') %>
+<% else %>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th><%= Commerce.human_attribute_name 'name' %></th>
+        <th class="visible-lg"><%= Commerce.human_attribute_name 'city' %></th>
+        <th class="visible-lg"><%= Commerce.human_attribute_name 'state' %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @commerces.each do |commerce| %>
+        <tr>
+          <td><%= commerce.name %></td>
+          <td class="visible-lg"><%= commerce.city %></td>
+          <td class="visible-lg"><%= commerce.state %></td>
+          <td><%= link_to_show commerce %></td>
+          <td><%= link_to_edit edit_commerce_path(commerce) %></td>
+          <td><%= link_to_destroy commerce %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= link_to_new new_commerce_path, class: 'btn btn-primary' %>
