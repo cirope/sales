@@ -11,10 +11,12 @@ Sales::Application.routes.draw do
   # Resources
   resources :categories
   resources :commerces
-  resources :products
-  resources :reservations
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  resources :products do
+    resources :reservations, shallow: true
+  end
 
   root 'sessions#new'
 end

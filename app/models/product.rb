@@ -6,4 +6,5 @@ class Product < ActiveRecord::Base
   strip_fields :name
 
   belongs_to :category
+  has_many :reservations, dependent: :destroy
 end

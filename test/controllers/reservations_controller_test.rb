@@ -4,24 +4,25 @@ class ReservationsControllerTest < ActionController::TestCase
 
   setup do
     @reservation = reservations :computer_for_tomorrow
+    @product = @reservation.product
 
     login
   end
 
   test 'should get index' do
-    get :index
+    get :index, product_id: @product
     assert_response :success
     assert_not_nil assigns(:reservations)
   end
 
   test 'should get new' do
-    get :new
+    get :new, product_id: @product
     assert_response :success
   end
 
   test 'should create reservation' do
     assert_difference 'Reservation.count' do
-      post :create, reservation: {
+      post :create, product_id: @product, reservation: {
         commerce_id: @reservation.commerce_id,
         loan: @reservation.loan,
         loan_payments: @reservation.loan_payments,
@@ -56,6 +57,6 @@ class ReservationsControllerTest < ActionController::TestCase
       delete :destroy, id: @reservation
     end
 
-    assert_redirected_to reservations_path
+    assert_redirected_to product_reservations_path(@product)
   end
 end

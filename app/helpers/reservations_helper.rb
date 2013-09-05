@@ -13,6 +13,10 @@ module ReservationsHelper
     @reservation.people
   end
 
+  def shallow_reservation_args
+    @reservation.new_record? ? [@product, @reservation] : @reservation
+  end
+
   private
 
   def reservation_phone type

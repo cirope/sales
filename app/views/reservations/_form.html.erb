@@ -1,11 +1,12 @@
-<%= simple_form_for @reservation, defaults: input_defaults do |f| %>
+<h3><%= @product %></h3>
+
+<%= simple_form_for shallow_reservation_args, defaults: input_defaults do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <div class="row">
       <div class="col-md-6">
-        <%= f.association :commerce, input_html: { autofocus: true } %>
-        <%= f.association :product %>
+        <%= f.association :commerce, input_html: { autofocus: true }, include_blank: '&nbsp;'.html_safe %>
         <%= f.input :deliver_at %>
       </div>
       <div class="col-md-6">
@@ -16,7 +17,7 @@
       </div>
     </div>
 
-    <h3><%= t '.delivery_section' %></h3>
+    <h4><%= t '.delivery_section' %></h4>
 
     <%= f.input :address %>
 

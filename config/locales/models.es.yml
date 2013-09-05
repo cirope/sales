@@ -20,6 +20,9 @@ es:
       product:
         one: 'Producto'
         other: 'Productos'
+      reservation:
+        one: 'Reservación'
+        other: 'Reservaciones'
       user:
         one: 'Usuario'
         other: 'Usuarios'
