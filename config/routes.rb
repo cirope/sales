@@ -17,6 +17,7 @@ Sales::Application.routes.draw do
   resources :products do
     resources :reservations, shallow: true
   end
+  resources :reservations, only: :index
 
   root 'sessions#new'
 end

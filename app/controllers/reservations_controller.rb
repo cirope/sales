@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
   
   # GET /products/1/reservations
   def index
-    @reservations = @product.reservations
+    @reservations = @product ? @product.reservations : Reservation.all
   end
 
   # GET /products/1/reservations/1

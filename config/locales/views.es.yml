@@ -51,45 +51,6 @@ es:
       success: 'Comercio actualizado correctamente'
       stale_object_error: 'No se pudo actualizar el comercio, revise los datos e inténtelo nuevamente'
 
-  reservations:
-    create:
-      success: 'Reservación creada correctamente'
-    destroy:
-      success: 'Reservación eliminada'
-    edit:
-      title: 'Editar reservación'
-    index:
-      new: 'Nueva reservación'
-      title: 'Listado de reservaciones'
-      empty_html: 'No hay reservaciones, puede crear una con el botón <span class="label label-info">Nueva reservación</span>'
-    new:
-      title: 'Crear reservación'
-    show:
-      title: 'Ver reservación'
-    update:
-      success: 'Reservación actualizada correctamente'
-      stale_object_error: 'No se pudo actualizar la reservación, revise los datos e inténtelo nuevamente'
-    form:
-      delivery_section: 'Datos de la entrega'
-      phones:
-        home: 'Teléfono fijo'
-        mobile: 'Celular o radio'
-        delivery: 'Teléfono de entrega'
-
-  sessions:
-    new:
-      title: 'Ingreso'
-      log_in: 'Ingresar'
-      email: 'Correo'
-      password: 'Contraseña'
-      remember_me: 'Recordarme'
-      forgot_password: '¿Olvidaste tu contraseña?'
-    create:
-      invalid: 'Tu correo y/o contraseña no están bien =('
-      logged_in: 'Bienvenido'
-    destroy:
-      logged_out: 'Hasta la próxima'
-
   password_resets:
     edit:
       title: 'Cambiar contraseña'
@@ -117,6 +78,7 @@ es:
       new: 'Nuevo producto'
       title: 'Listado de productos'
       empty_html: 'No hay productos, puede crear uno con el botón <span class="label label-info">Nuevo producto</span>'
+      empty_html: 'No hay productos, puede crear uno con el botón <span class="label label-info">Nuevo producto</span>'
       new_reservation: 'Reservar'
     new:
       title: 'Crear producto'
@@ -132,6 +94,45 @@ es:
       submit: 'Actualizar mis datos'
     update:
       success: 'Tus datos se actualizaron correctamente'
+
+  reservations:
+    create:
+      success: 'Reservación creada correctamente'
+    destroy:
+      success: 'Reservación eliminada'
+    edit:
+      title: 'Editar reservación'
+    index:
+      new: 'Nueva reservación'
+      title: 'Listado de reservaciones'
+      empty_html: 'No hay reservaciones, puede crear una desde el listado de productos'
+    new:
+      title: 'Crear reservación'
+    show:
+      title: 'Ver reservación'
+    update:
+      success: 'Reservación actualizada correctamente'
+      stale_object_error: 'No se pudo actualizar la reservación, revise los datos e inténtelo nuevamente'
+    form:
+      delivery_section: 'Datos de la entrega'
+      phones:
+        home: 'Teléfono fijo'
+        mobile: 'Celular o radio'
+        delivery: 'Teléfono de entrega'
+
+  sessions:
+    new:
+      title: 'Ingreso'
+      log_in: 'Ingresar'
+      email: 'Correo'
+      password: 'Contraseña'
+      remember_me: 'Recordarme'
+      forgot_password: '¿Olvidaste tu contraseña?'
+    create:
+      invalid: 'Tu correo y/o contraseña no están bien =('
+      logged_in: 'Bienvenido'
+    destroy:
+      logged_out: 'Hasta la próxima'
 
   users:
     create:

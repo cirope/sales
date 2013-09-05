@@ -1,10 +1,13 @@
 <h2>
-  <span class="pull-right label label-default"><%= @reservation.commerce %></span>
   <%= @reservation.product %>
 </h2>
 
 <div class="row">
   <div class="col-md-6">
+    <p>
+      <strong><%= Reservation.human_attribute_name 'commerce' %></strong>:
+      <%= @reservation.commerce %>
+    </p>
     <p>
       <strong><%= Reservation.human_attribute_name 'loan' %></strong>:
       <%= @reservation.loan %>
@@ -51,5 +54,4 @@
   </div>
 </div>
 
-<%= link_to_edit edit_reservation_path(@reservation) %> |
-<%= link_to_index product_reservations_path(@product) %>
+<%= link_to_edit edit_reservation_path(@reservation) %>
