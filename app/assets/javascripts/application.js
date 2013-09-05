@@ -20,4 +20,5 @@
 //= require password_resets
 //= require products
 //= require profiles
+//= require reservations
 //= require users

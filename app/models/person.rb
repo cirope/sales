@@ -4,4 +4,6 @@ class Person < ActiveRecord::Base
   include People::Validation
 
   strip_fields :name, :identification
+
+  belongs_to :reservation
 end

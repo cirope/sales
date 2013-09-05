@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901152247) do
+ActiveRecord::Schema.define(version: 20130904131051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,15 +43,21 @@ ActiveRecord::Schema.define(version: 20130901152247) do
     t.integer  "lock_version",   default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "reservation_id",             null: false
   end
 
+  add_index "people", ["reservation_id"], name: "index_people_on_reservation_id", using: :btree
+
   create_table "phones", force: true do |t|
-    t.string   "description",              null: false
-    t.string   "phone",                    null: false
-    t.integer  "lock_version", default: 0, null: false
+    t.string   "description",                null: false
+    t.string   "phone",                      null: false
+    t.integer  "lock_version",   default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "reservation_id",             null: false
   end
+
+  add_index "phones", ["reservation_id"], name: "index_phones_on_reservation_id", using: :btree
 
   create_table "products", force: true do |t|
     t.string   "name",                                              null: false
@@ -63,6 +69,23 @@ ActiveRecord::Schema.define(version: 20130901152247) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "reservations", force: true do |t|
+    t.string   "loan",                      null: false
+    t.integer  "loan_payments",             null: false
+    t.decimal  "loan_amount",               null: false
+    t.decimal  "advance",                   null: false
+    t.string   "address",                   null: false
+    t.date     "deliver_at",                null: false
+    t.integer  "commerce_id",               null: false
+    t.integer  "product_id",                null: false
+    t.integer  "lock_version",  default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reservations", ["commerce_id"], name: "index_reservations_on_commerce_id", using: :btree
+  add_index "reservations", ["product_id"], name: "index_reservations_on_product_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                               null: false

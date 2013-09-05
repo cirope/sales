@@ -1,0 +1,29 @@
+<% if @reservations.empty? %>
+  <%= render 'shared/empty_index', message: t('.empty_html') %>
+<% else %>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="visible-lg"><%= Reservation.human_attribute_name 'commerce' %></th>
+        <th><%= Reservation.human_attribute_name 'product' %></th>
+        <th><%= Reservation.human_attribute_name 'deliver_at' %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @reservations.each do |reservation| %>
+        <tr>
+          <td class="visible-lg"><%= reservation.commerce %></td>
+          <td><%= reservation.product %></td>
+          <td><%= l reservation.deliver_at, format: :short %></td>
+          <td><%= link_to_show reservation %></td>
+          <td><%= link_to_edit edit_reservation_path(reservation) %></td>
+          <td><%= link_to_destroy reservation %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= link_to_new new_reservation_path, class: 'btn btn-primary' %>

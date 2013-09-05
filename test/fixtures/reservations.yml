@@ -1,0 +1,9 @@
+computer_for_tomorrow:
+  loan: 123
+  loan_payments: 12
+  loan_amount: 1000.0
+  advance: 10.0
+  address: Some place
+  deliver_at: <%= Date.tomorrow.to_s :db %>
+  commerce: macys
+  product: computer

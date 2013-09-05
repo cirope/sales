@@ -1,9 +1,8 @@
-<h2><%= @product %></h2>
+<h2>
+  <span class="label label-default"><%= @product.category %></span>
+  <%= @product %>
+</h2>
 
-<p>
-  <strong><%= Product.human_attribute_name 'name' %></strong>:
-  <%= @product.name %>
-</p>
 <p>
   <strong><%= Product.human_attribute_name 'description' %></strong>:
   <%= @product.description %>

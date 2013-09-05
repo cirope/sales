@@ -44,6 +44,15 @@ es:
         price: 'Precio'
         stock: 'Cantidad disponible'
         category: 'Categoría'
+      reservation:
+        commerce: 'Comercio'
+        loan: 'Número de préstamo'
+        loan_payments: 'Cantidad de cuotas'
+        loan_amount: 'Monto del préstamo'
+        advance: 'Adelanto'
+        product: 'Producto'
+        address: 'Dirección'
+        deliver_at: 'Fecha de entrega'
       user:
         name: 'Nombre'
         lastname: 'Apellido'

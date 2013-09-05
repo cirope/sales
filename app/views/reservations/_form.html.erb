@@ -1,0 +1,49 @@
+<%= simple_form_for @reservation, defaults: input_defaults do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.association :commerce, input_html: { autofocus: true } %>
+        <%= f.association :product %>
+        <%= f.input :deliver_at %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :loan %>
+        <%= f.input :loan_payments %>
+        <%= f.input :loan_amount %>
+        <%= f.input :advance %>
+      </div>
+    </div>
+
+    <h3><%= t '.delivery_section' %></h3>
+
+    <%= f.input :address %>
+
+    <div class="row">      
+      <%= f.simple_fields_for :phones, reservation_phones do |p_f| %>
+        <div class="col-md-4">
+          <%= p_f.input :phone, label: p_f.object.description %>
+          <%= p_f.input :description, as: :hidden %>
+        </div>
+      <% end %>
+    </div>
+
+    <%= f.simple_fields_for :people, reservation_people do |p_f| %>
+      <div class="row">
+        <div class="col-md-4">
+          <%= p_f.input :identification %>
+        </div>
+        <div class="col-md-8">
+          <%= p_f.input :name %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= f.input :lock_version, as: :hidden %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn-primary' %>
+  </div>
+<% end %>

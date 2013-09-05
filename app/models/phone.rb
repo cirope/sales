@@ -4,4 +4,6 @@ class Phone < ActiveRecord::Base
   include Phones::Validation
 
   strip_fields :description, :phone
+
+  belongs_to :reservation
 end

@@ -1,0 +1,55 @@
+<h2>
+  <span class="pull-right label label-default"><%= @reservation.commerce %></span>
+  <%= @reservation.product %>
+</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <p>
+      <strong><%= Reservation.human_attribute_name 'loan' %></strong>:
+      <%= @reservation.loan %>
+    </p>
+    <p>
+      <strong><%= Reservation.human_attribute_name 'loan_payments' %></strong>:
+      <%= @reservation.loan_payments %>
+    </p>
+    <p>
+      <strong><%= Reservation.human_attribute_name 'loan_amount' %></strong>:
+      <%= number_to_currency @reservation.loan_amount %>
+    </p>
+    <p>
+      <strong><%= Reservation.human_attribute_name 'advance' %></strong>:
+      <%= number_to_currency @reservation.advance %>
+    </p>
+    <p>
+      <strong><%= Reservation.human_attribute_name 'deliver_at' %></strong>:
+      <%= l @reservation.deliver_at, format: :long %>
+    </p>
+    <p>
+      <strong><%= Reservation.human_attribute_name 'address' %></strong>:
+      <%= @reservation.address %>
+    </p>
+  </div>
+  <div class="col-md-6">
+    <p><strong><%= Phone.model_name.human count: 0 %></strong></p>
+
+    <ul>
+      <% @reservation.phones.each do |phone| %>
+        <li><%= phone %></li>
+      <% end %>
+    </ul>
+
+    <p><strong><%= Person.model_name.human count: 0 %></strong></p>
+
+    <ul>
+      <% @reservation.people.each do |person| %>
+        <li>
+          <%= person.name %> (<%= Person.human_attribute_name 'identification' %>: <%= person.identification %>) 
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= link_to_edit edit_reservation_path(@reservation) %> |
+<%= link_to_index reservations_path %>

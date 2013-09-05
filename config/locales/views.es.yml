@@ -51,6 +51,31 @@ es:
       success: 'Comercio actualizado correctamente'
       stale_object_error: 'No se pudo actualizar el comercio, revise los datos e inténtelo nuevamente'
 
+  reservations:
+    create:
+      success: 'Reservación creada correctamente'
+    destroy:
+      success: 'Reservación eliminada'
+    edit:
+      title: 'Editar reservación'
+    index:
+      new: 'Nueva reservación'
+      title: 'Listado de reservaciones'
+      empty_html: 'No hay reservaciones, puede crear una con el botón <span class="label label-info">Nueva reservación</span>'
+    new:
+      title: 'Crear reservación'
+    show:
+      title: 'Ver reservación'
+    update:
+      success: 'Reservación actualizada correctamente'
+      stale_object_error: 'No se pudo actualizar la reservación, revise los datos e inténtelo nuevamente'
+    form:
+      delivery_section: 'Datos de la entrega'
+      phones:
+        home: 'Teléfono fijo'
+        mobile: 'Celular o radio'
+        delivery: 'Teléfono de entrega'
+
   sessions:
     new:
       title: 'Ingreso'
