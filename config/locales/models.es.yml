@@ -62,3 +62,4 @@ es:
         email: 'Correo'
         password: 'Contraseña'
         password_confirmation: 'Confirmación'
+        type: 'Tipo'

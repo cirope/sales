@@ -25,15 +25,15 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @title = t('users.new.title')
-    @user = User.new(user_params)
+    @title = t 'users.new.title'
+    @user = User.new user_params
 
     create_and_respond
   end
 
   # PATCH/PUT /users/1
   def update
-    @title = t('users.edit.title')
+    @title = t 'users.edit.title'
 
     update_and_respond
   end
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :lastname, :email, :password, :password_confirmation, :lock_version)
+    params.require(:user).permit(:name, :lastname, :email, :password, :password_confirmation, :type, :lock_version)
   end
   alias_method :resource_params, :user_params
 
@@ -62,8 +62,10 @@ class UsersController < ApplicationController
     @user
   end
 
-  alias_method :after_create_url, :resource
-  alias_method :after_update_url, :resource
+  def after_create_url
+    @user.becomes User
+  end
+  alias_method :after_update_url, :after_create_url
 
   def edit_resource_url
     edit_user_url @user

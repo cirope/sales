@@ -25,7 +25,8 @@ class UsersControllerTest < ActionController::TestCase
         lastname: @user.lastname,
         email: 'new@user.com',
         password: '123',
-        password_confirmation: '123'
+        password_confirmation: '123',
+        type: 'Salesman'
       }
     end
 

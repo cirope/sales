@@ -1,4 +1,4 @@
-<%= simple_form_for @user, defaults: input_defaults do |f| %>
+<%= simple_form_for @user.becomes(User), defaults: input_defaults do |f| %>
   <%= f.error_notification %>
 
   <fieldset>
@@ -8,6 +8,7 @@
       <%= f.input :email %>
       <%= f.input :password %>
       <%= f.input :password_confirmation %>
+      <%= f.input :type, collection: user_types, include_blank: false %>
       <%= f.input :lock_version, as: :hidden %>
     </div>
 

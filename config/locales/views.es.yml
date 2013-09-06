@@ -152,3 +152,7 @@ es:
     update:
       success: 'Usuario actualizado correctamente'
       stale_object_error: 'No se pudo actualizar el usuario, revise los datos e inténtelo nuevamente'
+    form:
+      types:
+        admin: 'Administrador'
+        salesman: 'Vendedor'
