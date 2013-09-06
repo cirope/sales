@@ -78,8 +78,8 @@ es:
       new: 'Nuevo producto'
       title: 'Listado de productos'
       empty_html: 'No hay productos, puede crear uno con el botón <span class="label label-info">Nuevo producto</span>'
-      empty_html: 'No hay productos, puede crear uno con el botón <span class="label label-info">Nuevo producto</span>'
       new_reservation: 'Reservar'
+      select_all: 'Todos'
     new:
       title: 'Crear producto'
     show:

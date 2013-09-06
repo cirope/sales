@@ -8,4 +8,8 @@ class ProductsHelperTest < ActionView::TestCase
   test 'product reservation count' do
     skip 'In a rush'
   end
+
+  test 'categories options' do
+    skip 'In a rush'
+  end
 end

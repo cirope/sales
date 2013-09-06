@@ -9,10 +9,13 @@ Sales::Application.routes.draw do
   patch 'profile', to: 'profiles#update'
 
   # Resources
-  resources :categories
   resources :commerces
   resources :users
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  resources :categories do
+    resources :products, only: :index
+  end
 
   resources :products do
     resources :reservations, shallow: true

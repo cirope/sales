@@ -7,7 +7,8 @@ class ProductsController < ApplicationController
   
   # GET /products
   def index
-    @products = Product.all
+    @category = Category.find params[:category_id] if params[:category_id]
+    @products = @category ? @category.products : Product.all
   end
 
   # GET /products/1
