@@ -8,7 +8,7 @@
         <th><%= Product.human_attribute_name 'description' %></th>
         <th><%= Product.human_attribute_name 'price' %></th>
         <th><%= Product.human_attribute_name 'stock' %></th>
-        <th colspan="3"></th>
+        <th colspan="4"></th>
       </tr>
     </thead>
 
@@ -19,7 +19,7 @@
           <td><%= product.description %></td>
           <td><%= number_to_currency product.price %></td>
           <td><%= product.stock %></td>
-          <td><%= link_to t('.new_reservation'), new_product_reservation_path(product) %></td>
+          <td><%= link_to_reservation product %></td>
           <td><%= link_to_show product %></td>
           <td><%= link_to_edit edit_product_path(product) %></td>
           <td><%= link_to_destroy product %></td>
