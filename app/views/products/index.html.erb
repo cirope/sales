@@ -4,10 +4,11 @@
   <table class="table table-striped table-hover">
     <thead>
       <tr>
+        <th class="visible-lg"><%= Product.human_attribute_name 'category' %></th>
         <th><%= Product.human_attribute_name 'name' %></th>
-        <th><%= Product.human_attribute_name 'description' %></th>
         <th><%= Product.human_attribute_name 'price' %></th>
         <th><%= Product.human_attribute_name 'stock' %></th>
+        <th><%= Reservation.model_name.human count: 0 %></th>
         <th colspan="4"></th>
       </tr>
     </thead>
@@ -15,18 +16,19 @@
     <tbody>
       <% @products.each do |product| %>
         <tr>
+          <td class="visible-lg"><span class="label label-default"><%= product.category %></span></td>
           <td><%= product.name %></td>
-          <td><%= product.description %></td>
           <td><%= number_to_currency product.price %></td>
           <td><%= product.stock %></td>
+          <td><%= product_reservation_count product %></td>
           <td><%= link_to_reservation product %></td>
           <td><%= link_to_show product %></td>
-          <td><%= link_to_edit edit_product_path(product) %></td>
-          <td><%= link_to_destroy product %></td>
+          <td><%= link_to_edit edit_product_path(product) if admin? %></td>
+          <td><%= link_to_destroy product if admin? %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 <% end %>
 
-<%= link_to_new new_product_path, class: 'btn btn-primary' %>
+<%= link_to_new new_product_path, class: 'btn btn-primary' if admin? %>

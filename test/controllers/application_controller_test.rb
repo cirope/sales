@@ -29,6 +29,20 @@ class ApplicationControllerTest < ActionController::TestCase
     assert_nil @response.location
   end
 
+  test 'should authorize admin' do
+    login
+    authorize_admin
+
+    assert_nil @response.location
+  end
+
+  test 'should not authorize salesman' do
+    login users(:john)
+    authorize_admin
+
+    assert_redirected_to login_url
+  end
+
   private
 
   def current_user
@@ -37,5 +51,9 @@ class ApplicationControllerTest < ActionController::TestCase
 
   def authorize
     @controller.send(:authorize)
+  end
+
+  def authorize_admin
+    @controller.send(:authorize_admin)
   end
 end

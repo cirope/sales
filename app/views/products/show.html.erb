@@ -16,5 +16,7 @@
   <%= @product.stock %>
 </p>
 
-<%= link_to_edit edit_product_path(@product) %> |
+<% if admin? %>
+  <%= link_to_edit edit_product_path(@product) %> |
+<% end %>
 <%= link_to_index products_path %>

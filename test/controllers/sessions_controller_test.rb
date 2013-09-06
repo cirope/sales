@@ -10,7 +10,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'should create a new session' do
+  test 'should create a new salesman session' do
+    user = users :john
+    post :create, { email: user.email, password: '123' }
+
+    assert_redirected_to products_url
+    assert_equal user.id, current_user.id
+  end
+
+  test 'should create a new admin session' do
     post :create, { email: @user.email, password: '123' }
 
     assert_redirected_to users_url

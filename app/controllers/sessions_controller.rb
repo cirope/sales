@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
   private
 
   def default_url
-    users_url
+    admin? ? users_url : products_url
   end
 
   def store_auth_token user

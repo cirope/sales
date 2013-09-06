@@ -15,11 +15,11 @@
     <% if current_user %>
       <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
-          <%= menu_item_for User, users_path %>
+          <%= menu_item_for User, users_path if admin? %>
           <%= menu_item_for Product, products_path %>
-          <%= menu_item_for Category, categories_path %>
-          <%= menu_item_for Commerce, commerces_path %>
-          <%= menu_item_for Reservation, reservations_path %>
+          <%= menu_item_for Category, categories_path if admin? %>
+          <%= menu_item_for Commerce, commerces_path if admin? %>
+          <%= menu_item_for Reservation, reservations_path if admin? %>
         </ul>
 
         <%= render 'shared/user_actions' %>

@@ -1,7 +1,7 @@
 class CommercesController < ApplicationController
   include Responder
 
-  before_action :authorize
+  before_action :authorize_admin
   before_action :set_commerce, only:  [:show, :edit, :update, :destroy]
   before_action :set_title, only: [:index, :show, :new, :edit]
   

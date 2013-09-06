@@ -5,12 +5,12 @@ class ReservationsController < ApplicationController
   before_action :set_reservation, only:  [:show, :edit, :update, :destroy]
   before_action :set_title, only: [:index, :show, :new, :edit]
   
-  # GET /products/1/reservations
+  # GET /reservations
   def index
     @reservations = @product ? @product.reservations : Reservation.all
   end
 
-  # GET /products/1/reservations/1
+  # GET /reservations/1
   def show
   end
 
@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     @reservation = @product.reservations.new
   end
 
-  # GET /products/1/reservations/1/edit
+  # GET /reservations/1/edit
   def edit
   end
 
@@ -31,14 +31,14 @@ class ReservationsController < ApplicationController
     create_and_respond
   end
 
-  # PUT/PATCH /products/1/reservations/1
+  # PUT/PATCH /reservations/1
   def update
     @title = t 'reservations.edit.title'
 
     update_and_respond
   end
 
-  # DELETE /products/1/reservations/1
+  # DELETE /reservations/1
   def destroy
     destroy_and_respond
   end
