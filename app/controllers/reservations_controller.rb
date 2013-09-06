@@ -61,7 +61,7 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(
       :commerce_id, :loan, :loan_payments, :loan_amount, :advance, :product_id, :address, :deliver_at, :lock_version,
-      phones_attributes: [:phone, :description], people_attributes: [:identification, :name]
+      phones_attributes: [:phone, :description, :id], people_attributes: [:identification, :name, :id]
     )
   end
   alias_method :resource_params, :reservation_params

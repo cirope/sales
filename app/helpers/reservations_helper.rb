@@ -8,7 +8,9 @@ module ReservationsHelper
   end
 
   def reservation_people
-    @reservation.people.build until @reservation.people.size == 2
+    if @reservation.new_record?
+      @reservation.people.build while @reservation.people.size < 2
+    end
 
     @reservation.people
   end
