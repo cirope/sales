@@ -19,4 +19,6 @@
 <% if admin? %>
   <%= link_to_edit edit_product_path(@product) %> |
 <% end %>
+
+<%= link_to_reservation @product %> |
 <%= link_to_index products_path %>
